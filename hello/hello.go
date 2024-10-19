@@ -16,6 +16,10 @@ func main() {
 
 	// Request a greeting message.
 	message, err := greetings.Hello("yuhyeon")
+
+	// Request a multiple greeting message.
+	names := []string{"yuhyeon", "jiwoo"}
+	messages, err := greetings.HelloMultiple(names)
 	// If an error was returned, print it to the console and exit.
 	if err != nil {
 		log.Fatal(err)
@@ -24,4 +28,6 @@ func main() {
 	// Get a greeting message and print it.
 	//message := greetings.Hello("Yuhyeon")
 	fmt.Println(message)
+
+	fmt.Println(messages)
 }
